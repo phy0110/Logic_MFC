@@ -7,6 +7,7 @@
 
 class CLogicView : public CView
 {
+
 protected: // serialization에서만 만들어집니다.
 	CLogicView();
 	DECLARE_DYNCREATE(CLogicView)
@@ -14,6 +15,7 @@ protected: // serialization에서만 만들어집니다.
 // 특성입니다.
 public:
 	CLogicDoc* GetDocument() const;
+//	void AndGate(CClientDC& dc, int x, int y);
 
 // 작업입니다.
 public:
@@ -40,6 +42,11 @@ protected:
 // 생성된 메시지 맵 함수
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnAndgate();
+//	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+//	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+//	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 };
 
 #ifndef _DEBUG  // LogicView.cpp의 디버그 버전
